@@ -8,14 +8,14 @@ namespace BasinDemo.TheInternet.Pages
         public DynamicControlsExamplePage RemoveCheckbox()
         {
             Map.RemoveButton.Click();
-            Wait.Until(d => Map.CheckboxExampleMessage.Text.Contains("It's gone!"));
+            Wait.Until(_ => Map.CheckboxExampleMessage.Text.Contains("It's gone!"));
             return this;
         }
 
         public DynamicControlsExamplePage EnableTextField()
         {
             Map.EnableButton.Click();
-            Wait.Until(d => Map.TextFieldExampleMessage.Text.Contains("It's enabled!"));
+            Wait.Until(_ => Map.TextFieldExampleMessage.Text.Contains("It's enabled!"));
             return this;
         }
     }

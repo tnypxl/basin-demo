@@ -5,7 +5,12 @@ namespace BasinDemo.TheInternet.Pages
 {
     public class HomePage : Page
     {
-        public Element LinkFor(string linkText) => AnchorTag.WithText(linkText);
+        private Element LinkFor(string linkText) => AnchorTag.WithText(linkText);
+
+        public void NavigateToExample(string exampleName)
+        {
+            LinkFor(exampleName).Click();
+        }
 
 
     }
