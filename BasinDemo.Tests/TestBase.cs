@@ -11,9 +11,6 @@ namespace BasinDemo.Tests
 {
     public class TestBase
     {
-
-        private readonly DriverConfig _driverConfig;
-
         [SetUp]
         public void SetUp()
         {
@@ -23,7 +20,6 @@ namespace BasinDemo.Tests
 
             Driver.Init(() =>
             {
-
                 var builder = new FirefoxBuilder(new DriverConfig()
                 {
                     Headless = true
@@ -31,8 +27,8 @@ namespace BasinDemo.Tests
 
                 builder.DriverOptions.PageLoadStrategy = PageLoadStrategy.Eager;
                 builder.DriverOptions.LogLevel = FirefoxDriverLogLevel.Debug;
-                return builder;
 
+                return builder;
             });
 
             Driver.Goto(BSN.Config.Site.Url);
