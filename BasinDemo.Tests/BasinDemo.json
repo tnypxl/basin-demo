@@ -1,21 +1,18 @@
 {
   "Environment": {
-    "Driver": "Local Chrome",
+    "Browser": "Local Chrome",
     "Site": "The Internet"
   },
   "Sites": [
     {
-      "Name": "The Internet",
+      "Id": "The Internet",
       "Url": "http://the-internet.herokuapp.com"
     }
   ],
-  "Drivers": [
+  "Browsers": [
     {
-      "Name": "Local Chrome",
-      "BrowserName": "chrome"
+      "Id": "Local Chrome",
+      "Kind": "chrome"
     }
-  ],
-  "Drivers[0]": {
-    "BrowserName": "firefox"
-  }
+  ]
 }

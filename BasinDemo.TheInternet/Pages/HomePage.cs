@@ -11,7 +11,5 @@ namespace BasinDemo.TheInternet.Pages
         {
             LinkFor(exampleName).Click();
         }
-
-
     }
 }
