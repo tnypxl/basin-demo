@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasinDemo.Tests", "BasinDemo.Tests\BasinDemo.Tests.csproj", "{D41D9BE9-0CD1-4CCA-A36A-20732458C5C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasinDemo.TheInternet", "BasinDemo.TheInternet\BasinDemo.TheInternet.csproj", "{50C06413-4DC9-47C1-BCD0-03121E95EC86}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasinDemo.PageObjects", "BasinDemo.PageObjects\BasinDemo.PageObjects.csproj", "{50C06413-4DC9-47C1-BCD0-03121E95EC86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

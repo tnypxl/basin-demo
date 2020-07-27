@@ -1,29 +1,34 @@
-﻿using NUnit.Framework;
+﻿using Basin.PageObjects;
+using BasinDemo.PageObjects;
+using NUnit.Framework;
 
 namespace BasinDemo.Tests
 {
     public class DynamicControlsExampleTest : TestBase
     {
+        public HomePage Home => Pages.Get<HomePage>();
+        public DynamicControlsExamplePage DynamicControlsExample => Pages.Get<DynamicControlsExamplePage>();
+
         [SetUp]
         public void GoToExample()
         {
-            Pages.Home.NavigateToExample("Dynamic Controls");
+            Home.NavigateToExample("Dynamic Controls");
         }
 
         [Test]
         public void ShouldRemoveTheCheckbox()
         {
-            Assert.That(Pages.DynamicControlsExample.Map.Checkbox.Exists, Is.True);
-            Pages.DynamicControlsExample.RemoveCheckbox();
-            Assert.That(Pages.DynamicControlsExample.Map.Checkbox.Exists, Is.False);
+            Assert.That(DynamicControlsExample.CheckboxExists(), Is.True);
+            DynamicControlsExample.RemoveCheckbox();
+            Assert.That(DynamicControlsExample.CheckboxExists(), Is.False);
         }
 
         [Test]
         public void ShouldEnableTheTextField()
         {
-            Assert.That(Pages.DynamicControlsExample.Map.TextField.Enabled, Is.False);
-            Pages.DynamicControlsExample.EnableTextField();
-            Assert.That(Pages.DynamicControlsExample.Map.TextField.Enabled, Is.True);
+            Assert.That(DynamicControlsExample.TextFieldIsEnabled(), Is.False);
+            DynamicControlsExample.EnableTextField();
+            Assert.That(DynamicControlsExample.TextFieldIsEnabled(), Is.True);
         }
     }
 }

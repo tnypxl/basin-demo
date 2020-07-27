@@ -1,18 +1,19 @@
 {
   "Environment": {
-    "Browser": "Local Chrome",
-    "Site": "The Internet"
+    "Browser": "Firefox",
+    "Site": "Demo"
   },
   "Sites": [
     {
-      "Id": "The Internet",
-      "Url": "http://the-internet.herokuapp.com"
+      "Id": "Demo",
+      "Url": "https://the-internet.herokuapp.com"
     }
   ],
   "Browsers": [
     {
-      "Id": "Local Chrome",
-      "Kind": "chrome"
+      "Id": "Firefox",
+      "Kind": "firefox",
+      "Timeout": 10
     }
   ]
 }

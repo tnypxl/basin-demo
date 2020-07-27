@@ -1,0 +1,7 @@
+{
+    "dotnetCoreExplorer.searchpatterns": [
+        "**/bin/**/*.{dll,exe}"
+    ],
+    "dotnetCoreExplorer.logpanel": true,
+    "testExplorer.hideWhen": "noTests"
+}

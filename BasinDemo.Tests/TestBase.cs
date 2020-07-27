@@ -2,26 +2,28 @@ using System.IO;
 using NUnit.Framework;
 using Basin;
 using Basin.Selenium;
+using Basin.PageObjects;
+using BasinDemo.PageObjects;
 
 namespace BasinDemo.Tests
 {
     public class TestBase
     {
-        [SetUp]
-        public void SetUp()
+        [OneTimeSetUp]
+        public void OneTimeSetUp()
         {
             var CONFIG_PATH = Path.GetFullPath("../../../") + "BasinDemo.json";
 
             BasinEnv.SetConfig(CONFIG_PATH);
-<<<<<<< Updated upstream
-            Browser.Init();
-            Browser.Goto(BasinEnv.Site.Url);
-=======
+            Pages.Add(new HomePage());
+            Pages.Add(new DynamicControlsExamplePage());
+        }
 
+        [SetUp]
+        public void SetUp()
+        {
             BrowserSession.Init();
             BrowserSession.Goto(BasinEnv.Site.Url);
->>>>>>> Stashed changes
-            Pages.Init();
         }
 
         [TearDown]
