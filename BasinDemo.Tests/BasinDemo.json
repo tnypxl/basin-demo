@@ -13,7 +13,8 @@
     {
       "Id": "Firefox",
       "Kind": "firefox",
-      "Timeout": 10
+      "Timeout": 10,
+      "ElementTimeout": 5
     }
   ]
 }

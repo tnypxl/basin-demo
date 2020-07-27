@@ -56,7 +56,7 @@ namespace BasinDemo.PageObjects
 
         public Element DisableTextFieldButton => EnableDisableButton.WithText("Disable");
 
-        public Element Checkbox => CheckboxInputTag.WithId("checkbox");
+        public Element Checkbox => CheckboxInputTag;
 
         public Element TextField => TextInputTag;
     }
